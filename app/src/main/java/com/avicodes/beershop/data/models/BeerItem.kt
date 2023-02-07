@@ -1,12 +1,16 @@
 package com.avicodes.beershop.data.models
 
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
+@Entity(tableName = "beer_table")
 @Parcelize
 data class BeerItem(
     @SerializedName("id")
+    @PrimaryKey
     val id: Int,
     @SerializedName("name")
     val name: String,
@@ -16,8 +20,6 @@ data class BeerItem(
     val image_url: String,
     @SerializedName("brewers_tips")
     val brewers_tips: String,
-    @SerializedName("food_pairing")
-    val foodPairing: List<String>,
     @SerializedName("tagline")
     val tagline: String,
 ) : Parcelable

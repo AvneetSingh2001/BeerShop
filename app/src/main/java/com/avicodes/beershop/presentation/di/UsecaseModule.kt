@@ -1,8 +1,7 @@
 package com.avicodes.beershop.presentation.di
 
 import com.avicodes.beershop.domain.repository.BeersRepository
-import com.avicodes.beershop.domain.usecases.GetAllBearsUsecase
-import com.avicodes.beershop.domain.usecases.GetRandomBeerUsecase
+import com.avicodes.beershop.domain.usecases.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,7 +15,9 @@ class UsecaseModule {
 
     @Provides
     @Singleton
-    fun provideGetAllBearsUsecase(beersRepository: BeersRepository): GetAllBearsUsecase {
+    fun provideGetAllBearsUsecase(
+        beersRepository: BeersRepository
+    ): GetAllBearsUsecase {
         return GetAllBearsUsecase(
             beersRepository = beersRepository
         )
@@ -31,4 +32,5 @@ class UsecaseModule {
             beersRepository = beersRepository
         )
     }
+
 }
