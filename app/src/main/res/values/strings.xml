@@ -2,4 +2,9 @@
     <string name="app_name">BeerShop</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textBoozeDesc">Booze is the modern day pub that provides the range of beers to choose from this app. You can see details of the beers further</string>
+    <string name="text_welcome_booze">Welcome Boozers !</string>
+    <string name="text_recommendation">Booze\'s Recommendation</string>
+    <string name="text_booze_beer_pack">Booze\'s Beer Pack</string>
+    <string name="text_knowMore">Booze\'s have variety of flavours for your different moods. Click on beer to know more about it</string>
 </resources>
