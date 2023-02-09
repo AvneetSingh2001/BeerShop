@@ -72,12 +72,15 @@ class LandingFragment : Fragment() {
                                 Glide.with(requireContext())
                                     .load(it.image_url)
                                     .into(ivBeers)
+                                hideProgressBar()
                             }
 
                         }
                     }
                 }
-                is Resource.Loading -> {}
+                is Resource.Loading -> {
+                    showProgressBar()
+                }
                 is Resource.Error -> {
                     Toast.makeText(requireContext(), resource.message, Toast.LENGTH_SHORT).show()
                     Log.e("Landing fragment Error", resource.message.toString())
@@ -96,4 +99,14 @@ class LandingFragment : Fragment() {
 
     }
 
+    private fun showProgressBar() {
+        binding.progCons.visibility = View.VISIBLE
+        binding.mainCons.visibility = View.GONE
+    }
+
+
+    private fun hideProgressBar() {
+        binding.progCons.visibility = View.GONE
+        binding.mainCons.visibility = View.VISIBLE
+    }
 }

@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "com.avicodes.beershop"
-        minSdk 26
+        minSdk 22
         targetSdk 33
         versionCode 1
         versionName "1.0"
